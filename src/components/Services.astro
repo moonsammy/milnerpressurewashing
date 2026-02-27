@@ -1,0 +1,110 @@
+---
+const services = [
+  {
+    icon: "🏠",
+    name: "House Washing",
+    description: "Soft-wash exterior house cleaning that removes dirt, mildew, algae, and grime from siding without damage.",
+    placeholder: true,
+  },
+  {
+    icon: "🚗",
+    name: "Driveway & Walkway",
+    description: "High-pressure cleaning restores concrete and pavers to like-new condition, removing oil stains, moss, and years of buildup.",
+    placeholder: true,
+  },
+  {
+    icon: "🪵",
+    name: "Deck & Patio",
+    description: "Careful cleaning of wood, composite, and stone surfaces to prep for staining, sealing, or simply to enjoy again.",
+    placeholder: true,
+  },
+  {
+    icon: "🌿",
+    name: "Fence Cleaning",
+    description: "Restore wood and vinyl fencing to a fresh, clean look — removing mildew, weathering, and discoloration.",
+    placeholder: true,
+  },
+  {
+    icon: "🏢",
+    name: "Garage & Outbuildings",
+    description: "Exterior cleaning of garages, sheds, and other structures to match a freshly cleaned home.",
+    placeholder: true,
+  },
+  {
+    icon: "📋",
+    name: "Custom Quote",
+    description: "Have something specific in mind? We're happy to assess and provide a free no-obligation estimate for any job.",
+    placeholder: false,
+    cta: true,
+  },
+];
+---
+<div class="services-bg">
+  <section id="services">
+    <p class="section-label fade-in">What We Do</p>
+    <h2 class="section-title fade-in fade-in-delay-1">Residential Services</h2>
+    <p class="services-intro fade-in fade-in-delay-2">
+      We offer a full range of exterior cleaning services for homeowners throughout
+      Plymouth and the surrounding South Shore communities.
+    </p>
+    <div class="services-grid">
+      {services.map((s, i) => (
+        <div class={`service-card card fade-in fade-in-delay-${(i % 3) + 1} ${s.cta ? 'service-card--cta' : ''}`}>
+          <div class="service-icon">{s.icon}</div>
+          <h3 class="service-name">{s.name}</h3>
+          <p class="service-desc">{s.description}</p>
+          {s.cta && (
+            <a href="#contact" class="service-link">Request a Quote &rarr;</a>
+          )}
+          {s.placeholder && (
+            <span class="placeholder-note">Pricing available upon request</span>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+</div>
+
+<style>
+  .services-bg { background: var(--off-white); }
+  .services-intro {
+    font-size: 1rem; line-height: 1.8;
+    color: var(--text-muted); max-width: 560px;
+    margin-bottom: 3rem;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .service-card { display: flex; flex-direction: column; gap: 0.75rem; }
+  .service-card--cta {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+  }
+  .service-card--cta .service-name { color: var(--white); }
+  .service-card--cta .service-desc { color: rgba(255,255,255,0.7); }
+  .service-icon { font-size: 2rem; }
+  .service-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem; font-weight: 600;
+    color: var(--navy);
+  }
+  .service-desc { font-size: 0.875rem; line-height: 1.7; color: var(--text-muted); flex: 1; }
+  .service-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem; font-weight: 600;
+    color: var(--sky); text-decoration: none;
+    margin-top: auto;
+    transition: color 0.2s;
+  }
+  .service-link:hover { color: var(--white); }
+  .placeholder-note {
+    font-size: 0.7rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--border);
+    margin-top: auto;
+  }
+  @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 580px) { .services-grid { grid-template-columns: 1fr; } }
+</style>

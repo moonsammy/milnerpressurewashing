@@ -1,0 +1,188 @@
+---
+---
+<div class="contact-bg">
+  <section id="contact">
+    <div class="contact-grid">
+      <div class="contact-left fade-in">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Request a<br />Free Quote</h2>
+        <p class="contact-body">
+          Tell us about your property and what you need cleaned.
+          We'll get back to you quickly with a free, no-obligation estimate.
+        </p>
+        <div class="contact-details">
+          <div class="detail">
+            <span class="detail-icon">📍</span>
+            <div>
+              <strong>Service Area</strong>
+              <p>Plymouth, Duxbury, Kingston, Marshfield, and surrounding towns</p>
+            </div>
+          </div>
+          <div class="detail">
+            <span class="detail-icon">📅</span>
+            <div>
+              <strong>Availability</strong>
+              <p>Spring through Summer &mdash; book early, spots fill fast</p>
+            </div>
+          </div>
+          <div class="detail">
+            <span class="detail-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hello@milnerpressurewashing.com" class="contact-email">
+                hello@milnerpressurewashing.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right fade-in fade-in-delay-2">
+        <div class="form-card">
+          <p class="form-placeholder-note">
+            ⚠️ <em>Contact form placeholder — wire up to a form service (Formspree, Netlify Forms, etc.) before launch.</em>
+          </p>
+          <form class="quote-form" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" disabled />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(508) 555-0100" disabled />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@email.com" disabled />
+            </div>
+            <div class="form-group">
+              <label for="address">Property Address</label>
+              <input type="text" id="address" name="address" placeholder="123 Main St, Plymouth MA" disabled />
+            </div>
+            <div class="form-group">
+              <label for="services">Services Needed</label>
+              <select id="services" name="services" disabled>
+                <option>House Washing</option>
+                <option>Driveway & Walkways</option>
+                <option>Deck & Patio</option>
+                <option>Fence</option>
+                <option>Multiple / Full Package</option>
+                <option>Not Sure — Please Advise</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Additional Notes</label>
+              <textarea id="message" name="message" rows="3" placeholder="Any details about your property or specific concerns..." disabled></textarea>
+            </div>
+            <button type="submit" class="form-submit" disabled>
+              Submit Request (Coming Soon)
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-mark-footer">MPW</span>
+      <span>Milner Pressure Washing</span>
+    </div>
+    <p class="footer-tagline">Serving Plymouth and the South Shore</p>
+    <p class="footer-copy">&copy; 2025 Milner Pressure Washing. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .contact-bg { background: var(--navy); }
+  .contact-bg .section-label { color: var(--sky); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 5rem; align-items: start;
+  }
+  .section-title { color: var(--white); }
+  .contact-body {
+    font-size: 0.95rem; line-height: 1.85;
+    color: rgba(255,255,255,0.65); margin-bottom: 2.5rem;
+  }
+  .contact-details { display: flex; flex-direction: column; gap: 1.5rem; }
+  .detail { display: flex; gap: 1rem; align-items: flex-start; }
+  .detail-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
+  .detail strong {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem; font-weight: 600;
+    color: var(--white); display: block; margin-bottom: 0.2rem;
+  }
+  .detail p { font-size: 0.825rem; line-height: 1.6; color: rgba(255,255,255,0.55); }
+  .contact-email {
+    font-size: 0.825rem; color: var(--sky);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .contact-email:hover { color: white; }
+
+  .form-card {
+    background: var(--white); border-radius: 10px;
+    padding: 2.5rem;
+  }
+  .form-placeholder-note {
+    font-size: 0.75rem; color: var(--text-muted);
+    font-style: italic; margin-bottom: 1.5rem;
+    padding: 0.75rem; background: #fff8e6;
+    border-left: 3px solid #f59e0b; border-radius: 3px;
+  }
+  .quote-form { display: flex; flex-direction: column; gap: 1.25rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem; font-weight: 600;
+    color: var(--navy); letter-spacing: 0.03em;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: 5px; font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--text); background: var(--off-white);
+    opacity: 0.6; cursor: not-allowed;
+    resize: vertical;
+  }
+  .form-submit {
+    background: var(--blue); color: var(--white);
+    border: none; border-radius: 5px;
+    padding: 0.9rem; cursor: not-allowed;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem; font-weight: 600;
+    opacity: 0.6;
+  }
+
+  footer { background: #081520; padding: 2.5rem 2rem; }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 0.6rem; text-align: center;
+  }
+  .footer-logo {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem; font-weight: 600; color: var(--white);
+  }
+  .logo-mark-footer {
+    background: var(--sky); color: var(--navy);
+    padding: 0.2rem 0.5rem; border-radius: 3px;
+    font-size: 0.8rem; font-weight: 700;
+  }
+  .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+  .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.25); }
+
+  @media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>

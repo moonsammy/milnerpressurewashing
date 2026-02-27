@@ -1,0 +1,83 @@
+---
+---
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-label fade-in">Plymouth, MA &mdash; Serving the South Shore</p>
+    <h1 class="hero-headline fade-in fade-in-delay-1">
+      Clean. Restore.<br /><span class="headline-accent">Impress.</span>
+    </h1>
+    <p class="hero-sub fade-in fade-in-delay-2">
+      Professional residential pressure washing for driveways, homes, decks, patios,
+      and more. Reliable service, thorough results, and honest pricing — every job.
+    </p>
+    <div class="hero-actions fade-in fade-in-delay-3">
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="#services" class="btn-ghost">See Our Services</a>
+    </div>
+    <div class="hero-badges fade-in fade-in-delay-4">
+      <div class="badge">&#10003; Free Estimates</div>
+      <div class="badge">&#10003; Locally Owned</div>
+      <div class="badge">&#10003; Summer Availability</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex; align-items: center;
+    padding: 8rem 2rem 4rem;
+    max-width: 100%; margin: 0;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, #0d2137 0%, #1a3654 50%, #0d2137 100%);
+    z-index: 0;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 50%, rgba(77,168,218,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 10% 80%, rgba(30,108,191,0.12) 0%, transparent 50%);
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    max-width: 680px; margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .hero-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--sky); margin-bottom: 1.25rem;
+  }
+  .hero-headline {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    font-weight: 700; line-height: 1.05;
+    color: var(--white); margin-bottom: 1.5rem;
+  }
+  .headline-accent { color: var(--sky); }
+  .hero-sub {
+    font-size: 1.1rem; line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    max-width: 540px; margin-bottom: 2.5rem;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+  .hero-badges { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .badge {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem; font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.03em;
+  }
+  @media (max-width: 768px) {
+    .hero-content { padding: 0; }
+    .hero-badges { gap: 1rem; }
+  }
+</style>

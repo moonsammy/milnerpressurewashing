@@ -1,0 +1,84 @@
+---
+const features = [
+  {
+    icon: "📍",
+    title: "Local & Reliable",
+    body: "We're based in Plymouth, MA — your neighbors. We show up on time, do the work thoroughly, and stand behind every job.",
+  },
+  {
+    icon: "💧",
+    title: "Attention to Detail",
+    body: "We take time to do things right. Every surface is assessed before we start so we use the right pressure and technique for the job.",
+  },
+  {
+    icon: "💬",
+    title: "Honest Pricing",
+    body: "No surprises. We provide clear, upfront quotes before any work begins. What we quote is what you pay.",
+  },
+];
+---
+<section id="why-us">
+  <div class="why-grid">
+    <div class="why-left fade-in">
+      <p class="section-label">Why Choose Us</p>
+      <h2 class="section-title">Built on Hard Work<br />and Honest Service</h2>
+      <p class="why-body">
+        Milner Pressure Washing is a small, student-run business out of Plymouth.
+        We started it because we saw neighbors spending too much on services they
+        could get locally, reliably, and at a fair price.
+      </p>
+      <p class="why-body">
+        Every job gets our full attention — whether it's a single driveway or a
+        full exterior package. We're building our reputation one clean property at a time.
+      </p>
+      <a href="#contact" class="btn-primary-navy">Get a Free Estimate &rarr;</a>
+    </div>
+    <div class="why-right">
+      {features.map((f, i) => (
+        <div class={`feature fade-in fade-in-delay-${i + 1}`}>
+          <div class="feature-icon">{f.icon}</div>
+          <div>
+            <h3 class="feature-title">{f.title}</h3>
+            <p class="feature-body">{f.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
+  }
+  .why-body {
+    font-size: 0.95rem; line-height: 1.85;
+    color: var(--text-muted); margin-bottom: 1.25rem;
+  }
+  .btn-primary-navy {
+    display: inline-block; margin-top: 0.5rem;
+    background: var(--navy); color: var(--white);
+    padding: 0.85rem 2rem; text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem; font-weight: 600; border-radius: 4px;
+    transition: background 0.2s ease;
+  }
+  .btn-primary-navy:hover { background: var(--navy-light); }
+  .why-right { display: flex; flex-direction: column; gap: 2rem; }
+  .feature {
+    display: flex; gap: 1.25rem; align-items: flex-start;
+    padding: 1.5rem; background: var(--off-white);
+    border-radius: 8px; border: 1px solid var(--border);
+  }
+  .feature-icon { font-size: 1.75rem; flex-shrink: 0; }
+  .feature-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 0.4rem;
+  }
+  .feature-body { font-size: 0.875rem; line-height: 1.7; color: var(--text-muted); }
+  @media (max-width: 768px) {
+    .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+</style>

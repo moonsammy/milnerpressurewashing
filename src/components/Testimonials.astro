@@ -1,0 +1,74 @@
+---
+const testimonials = [
+  {
+    stars: 5,
+    quote: "Our driveway looks brand new. They were on time, professional, and the price was very fair. Will definitely book again next summer.",
+    name: "Sarah T.",
+    location: "Plymouth, MA",
+    placeholder: true,
+  },
+  {
+    stars: 5,
+    quote: "Hired them to wash the house and deck before a family gathering. Incredible difference — the whole exterior looks like it was just painted. Highly recommend.",
+    name: "Mike R.",
+    location: "Duxbury, MA",
+    placeholder: true,
+  },
+  {
+    stars: 5,
+    quote: "Really impressed by how thorough they were. They took care around the garden beds and cleaned up after themselves. Great job all around.",
+    name: "Karen L.",
+    location: "Kingston, MA",
+    placeholder: true,
+  },
+];
+---
+<div class="testimonials-bg">
+  <section id="testimonials">
+    <p class="section-label fade-in">Reviews</p>
+    <h2 class="section-title fade-in fade-in-delay-1">What Our Customers Say</h2>
+    <p class="testimonials-note fade-in fade-in-delay-1">
+      ⚠️ <em>Placeholder testimonials — replace with real customer reviews before launch.</em>
+    </p>
+    <div class="testimonials-grid">
+      {testimonials.map((t, i) => (
+        <div class={`testimonial card fade-in fade-in-delay-${i + 1}`}>
+          <div class="stars">
+            {"★".repeat(t.stars)}
+          </div>
+          <p class="quote">&ldquo;{t.quote}&rdquo;</p>
+          <div class="reviewer">
+            <span class="reviewer-name">{t.name}</span>
+            <span class="reviewer-location">{t.location}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</div>
+
+<style>
+  .testimonials-bg { background: var(--sky-light); }
+  .testimonials-note {
+    font-size: 0.8rem; color: var(--text-muted);
+    margin-bottom: 2.5rem; font-style: italic;
+  }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .testimonial { display: flex; flex-direction: column; gap: 1rem; }
+  .stars { font-size: 1.1rem; color: #f59e0b; letter-spacing: 0.1em; }
+  .quote {
+    font-size: 0.925rem; line-height: 1.8;
+    color: var(--text); font-style: italic; flex: 1;
+  }
+  .reviewer { display: flex; flex-direction: column; gap: 0.15rem; margin-top: auto; }
+  .reviewer-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.875rem; font-weight: 600; color: var(--navy);
+  }
+  .reviewer-location { font-size: 0.775rem; color: var(--text-muted); }
+  @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 580px) { .testimonials-grid { grid-template-columns: 1fr; } }
+</style>
